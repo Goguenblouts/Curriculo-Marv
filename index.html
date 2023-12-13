@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Curriculo Marcelio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<style>
+
+  /* Estilo base */
+  body {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    font-family: Calibri, sans-serif;
+    font-size: 15px;
+    height: 100%;
+  }
+    /* Barra de Navegação */
+    .Navigation {
+        width: 100%;
+        height: 50px;
+        background-color:  #2196f3;
+        border-radius: 10px;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        bottom: 0;
+        z-index: 10;
+        letter-spacing: 30px;
+    }
+
+    .list {
+        list-style: none;
+        display: inline-block;
+        margin: 10px;
+    }
+
+    .list a {
+        text-decoration: none;
+        color:black;
+        font-size: 20px;
+        padding-left: 10px;
+        position: relative;
+        left: -30px;
+    }
+
+    .list a:hover {
+        color: gray;
+    }
+
+
+    /* Seções */
+    section {
+        display:none;
+        text-align: center;
+        width: 100%;
+        height: 60px;
+        position: fixed;
+    }
+
+    #home, #pessoal, #educação, #cursos, #experiencia{
+        background-color: #ffa117;
+    }
+
+    /* Mostrar seção ativa */
+    .active-section {
+        display:block;
+        
+    }
+    
+    /*Seção objetivo profissional*/
+
+    .info-base h1 {
+      font-size: 30px;
+      padding-top: 40vh;
+      text-align: center; 
+      margin: 0 auto;
+      color: #000000;
+
+    }
+
+    .home-paragraf {
+      font-size: 25px;
+      text-align: center;
+      color: #000000;
+      margin: 0 auto;
+
+    }
+
+    .info-base {
+        display: none;
+        text-align: justify;
+        padding: 60px;
+        color: #000000;
+        font-size: 20px;
+    }
+    .active-info{
+      display: block;
+    }
+
+/*Seção Informaçoes Pessoais*/
+
+
+.info-base h3, h4{
+  color: #000000;
+  text-align: center;
+  font-size: 20px;
+}
+
+    /* Estilo para os dados informativos de todas as páginas */
+
+    .cursos li, .exper li {
+        color: rgb(0, 81, 255);
+        max-height: 700px;
+        line-height: 80px;
+
+    }
+
+
+    /*Informações escondidas antes de passar o mouse*/
+    .hidden-info {
+    font-size: 17px;
+  display: none;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 45px;
+  width: 1050px; /* Ajuste a largura conforme necessário */
+  top: 100%; /* Centralize verticalmente */
+  padding-left: 40px;
+  transform: translateY(-50%); /* Centralize verticalmente */
+  text-align: left;
+}
+.active-info {
+  display: block;
+}
+/*Estilo para os botoes de experiencia*/
+.arrow-position{
+  position: relative;
+      top: 50px;
+    }
+
+.cta {
+  margin: auto;
+  padding: 12px 18px;
+  transition: all 0.3s ease;
+  border: none;
+  background: none;
+  position: absolute;
+  display: block;
+  left: 30%;
+}
+
+/* Estilo comum para os botões */
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 10px;
+  background: #83c7db;
+  width: 50px;
+  height: 155px;
+  transition: all 0.3s ease;
+}
+
+.cta span {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #234567;
+  justify-items: center;
+  align-items: center;
+  display: flex;
+}
+
+.cta:hover:before {
+  width: 100%;
+  background: #b1dae7;
+}
+
+.cta:active {
+  transform: scale(0.95);
+}
+
+/* Posicionamento dos botões */
+.cta1 { top: 11.6%; }
+.cta2 { top: 30.5%; }
+.cta3 { top: 49.1%; }
+.cta4 { top: 67.5%; }
+
+/* Estilo para os dados informativos de todas as páginas */
+.link-container {
+    width: 100%;
+    height: 50px;
+    background-color:  #2196f3;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:space-around;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    bottom: 0;
+    z-index: 10;
+    letter-spacing: 30px;
+}
+
+/* Estilo para cada ícone e nome */
+.link-item {
+  list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Alteração: tornar os elementos flex */
+
+}
+
+.link-item a {
+  text-decoration: none;
+    color:black;
+    font-size: 20px;
+    padding-top: 460px;
+    padding-left: 120px;
+}
+
+.link-item i {
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+    /* Estilo para informações pessoais */
+    .pessoal .end {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      position: relative;
+      top: 400px;
+      margin: 20px auto;
+      max-width: 0 auto;
+    }
+
+    .pessoal ul .end ul {
+      flex: 1;
+      margin: 0;
+      padding: 0;
+      font-size: 18px;
+      color: #000000;
+      list-style: none;
+      margin-right: 20px;
+    }
+
+    .dados h1{
+      font-size: 30px;
+      position: absolute;
+      display: block;
+      top: 10px;
+      padding-left: 44%;
+      color: #000000;
+      padding-top: 15%;
+    }
+
+    .dados h2{
+      font-size: 30px;
+      position: absolute;
+      top: 78%;
+      padding-left: 725px;
+      color: #000000;
+    }
+        /* Estilo para a imagem */
+        .profile-image {
+      width: 200px; /* Ajuste o tamanho conforme necessário */
+      height: 200px;
+      border-radius: 10%; /* Para tornar a imagem circular */
+      position: absolute;
+      top: 80px;
+      left: 1600px;
+    }
+
+.mapis{
+  position:absolute;
+  display: block;
+  top: 350px; 
+  width: 1750px;
+  height: 300px;
+  justify-content: center;
+}
+
+  /* Estilo para telas menores, como tablets e smartphones */
+  @media screen and (max-width: 768px) {
+    .Navigation {
+      flex-direction: row;
+      justify-content: space-around;
+      bottom: 0;
+      top: auto;
+      height: 60px;
+    }
+    
+    .list {
+      margin: 0;
+      padding: 10px;
+    }
+    
+    .profile-image {
+      width: 100px;
+      height: 100px;
+      left: auto;
+      top: 100px;
+    }
+
+    .pessoal .end {
+      top: 0;
+      margin: 20px auto 0;
+    }
+
+    .link-item a {
+      padding: 5px;
+      font-size: 14px;
+    }
+
+    .cta {
+      margin: 5px 0;
+      padding: 8px 12px;
+    }
+
+    .icon1 {
+      margin-right: 3px;
+    }
+
+    .mapis {
+      width: 100%;
+      height: 200px;
+    }
+  }
+
+</style>
+
+<body> 
+  <!-- Barra de Navegação -->
+  <div class="Navigation">
+    <ul>
+      <li class="list" onclick="showSection('home')"><a href="#"><span class="icon">
+        <i class="fas fa-home"></i>
+      </span></a></li>
+      <li class="list" onclick="showSection('pessoal')"><a href="#"><span class="icon">
+        <i class="fas fa-user"></i>
+      </span></a></li>
+      <li class="list" onclick="showSection('educação')"><a href="#"><span class="icon">
+        <i class="fas fa-graduation-cap"></i>
+      </span></a></li>
+      <li class="list" onclick="showSection('cursos')"><a href="#"><span class="icon">
+        <i class="fas fa-book-open"></i>
+      </span></a></li>
+      <li class="list" onclick="showSection('experiencia')"><a href="#"><span class="icon">
+        <i class="fas fa-briefcase"></i>
+      </span></a></li>
+    </ul>
+  </div>
+    <!-- Seções de informações -->
+    
+      <section id="home" class="active-section">
+        <h2>Curriculo Profissional</h2>
+      </section>
+    
+      <section id="pessoal">
+        <h2>Informações Pessoais</h2>
+      </section>
+    
+      <section id="educação">
+        <h2>Formação Acadêmica</h2>
+      </section>
+    
+      <section id="cursos">
+        <h2>Cursos Profissionalizantes</h2>
+      </section>
+    
+      <section id="experiencia">
+        <h2>Experiência Profissional</h2>
+      </section>
+  
+<nav>
+ <!-- Informações fora das tags section -->
+
+  <div class="info-base active-info" id="info-home">
+     <h1>Objetivo Profissional</h1>
+    <div class="home-paragraf">
+     <p>Profissional dedicado e multifacetado em áreas como administração, logística e design gráfico. Minha trajetória inclui experiência em setores variados, demonstrando adaptabilidade e capacidade de aprendizado autônomo. Busco oportunidades que me permitam aplicar minhas habilidades técnicas e de liderança para contribuir com o crescimento e sucesso da sua empresa.</p>
+    </div>
+  </div>  
+  <div class="info-base" id="info-pessoal">
+    <div class="pessoal">
+        <img class="profile-image" src="https://github.com/Goguenblouts/Fotos-Marv/blob/main/WhatsApp%20Image%202023-08-13%20at%207.28.44%20PM.jpeg?raw=true" alt="Foto de Marcelio Venancio">
+      <ul><b>Nome:</b> Marcelio Venancio Alves da Silva</ul>
+      <ul><b>Idade:</b> 24 Anos</ul>
+      <ul><b>Status Civil:</b> Solteiro</ul>
+      <ul><b>Nacionalidade:</b> Brasileiro</ul>
+      
+
+      <div class="end">
+        <ul><b>End:</b> Rua Doutor Sizemando Silva Campos</ul>
+        <ul><b>Complemento:</b> Qd 27, Lt 06</ul>
+        <ul><b>Setor:</b> Residencial Luzia Monteiro</ul>
+        <ul><b>Cidade:</b> Trindade</ul>
+        <ul><b>Estado:</b> Goiás</ul>
+      </div>
+      <div class="dados"><h1>Endereço</h1></div>
+      <div class="mapis" id="map"></div>
+      
+      <div class="dados"><h2>Redes Sociais e Contato</h2></div>
+      <div class="links-container">
+        <div class="link-item">
+          <a href="https://www.facebook.com/marcelio.venancio.9" target="_blank"><i class="fab fa-facebook"></i>Marcelio Venancio</a>
+
+          <a href="https://instagram.com/marcelio_venancio?igshid=MzNlNGNkZWQ4Mg==" target="_blank"><i class="fab fa-instagram"></i>marcelio_venancio</a>
+
+          <a href="https://www.linkedin.com/in/marcelio-venancio-87a417254" target="_blank"><i class="fab fa-linkedin"></i>Marcelio Venancio</a>
+
+          <a href="https://wa.me/+5562986369673" target="_blank"><i class="fab fa-whatsapp"></i>(62) 98636-9673</a>
+
+          <a href="mailto:marceliovenancio25@gmail.com" target="_blank"><i class="far fa-envelope"></i>marceliovenancio25@gmail.com</a>
+        </div>
+      </div>
+    </div> 
+  </div> 
+ 
+
+<div class="info-base" id="info-educação">
+  <div class="educação">
+    <ul><b>Ensino Médio:</b> Centro de Ensino Estado do Ceará</ul>
+    <ul><b>Cidade:</b> Bacabal</ul>
+    <ul><b>Estado:</b> Maranhão</ul>
+    <ul><b>Conclusão:</b> 2016</ul>
+  </div>
+</div>  
+
+<div class="info-base" id="info-cursos">
+  <div class="cursos">
+    <ul>
+      <li><b>Programa do Governo:</b></li>
+      <ul>Aprendizagem de Comércio de Bens e Serviços: Competências básicas para o trabalho, melhoria na escolaridade - Matemática, Melhoria na Escolaridade - Português, Administração e organização do trabalho, higiene, saúde e segurança do trabalho, educação ambiental, recepção e atendimento ao cliente, introdução à informática, noções do código de defesa do consumidor, técnicas de vendas, dicção e técnicas vocais, técnicas de telemarketing.</ul>
+      <ul><b>Entidade:</b> Senac - Bacabal/Ma</ul>
+      <ul><b>Período:</b> 18/05/2015 a 13/06/2016</ul>
+      <ul><b>Carga Horária:</b> 800 horas</ul>
+    </ul>  
+
+    <ul>
+      <li><b>Melhores Práticas de Almoxarifado</b></li>
+      <ul><b>Entidade:</b> Logschool Escola Online - EAD</ul>
+      <ul><b>Período:</b> 15/09/2022 a 30/09/2022</ul>
+      <ul><b>Carga Horária:</b> 16 horas</ul>
+    </ul>  
+      
+    <ul>
+      <li><b>Fundamentos do Design Gráfico</b></li>
+      <ul><b>Entidade:</b> Fundação Bradesco - EAD</ul>
+      <ul><b>Período:</b> 14/12/2022 a 25/12/2022</ul>
+      <ul><b>Carga Horária:</b> 06 horas</ul>
+    </ul>  
+      
+    <ul>
+      <li><b>Fundamentos de TI: Hardware e Software</b></li>
+      <ul><b>Entidade:</b> Fundação Bradesco - EAD</ul>
+      <ul><b>Período:</b> 11/02/2023 a 16/02/2023</ul>
+      <ul><b>Carga Horária:</b> 07 horas</ul>
+    </ul>  
+
+    <ul>
+      <li><b>5S no Escritório</b></li>
+      <ul><b>Entidade:</b> Sest Senat</ul>
+      <ul><b>Período:</b> 10/06/2023 a 10/06/2023</ul>
+      <ul><b>Carga Horária:</b> 15 horas</ul>
+    </ul>
+  </div>
+</div>
+
+<div class="info-base" id="info-experiencia">
+  <div class="exper">
+
+    <ul>
+      <li><b>2015 - 2016 - LOJAS NOROESTE</b></li>
+      <ul><b>Cargo:</b> Menor Aprendiz - Estoquista</ul>
+      <ul><b>Cidade:</b> Bacabal-Ma</ul>
+      <ul><b>Fone:</b> (99) 3621-3451 / 3621-3378</ul>
+    </ul>
+
+    <ul>
+      <li><b>2016 - 2017 - NIL ART'S PINTURAS</b></li>
+      <ul><b>Cargo:</b> Serigrafista</ul>
+      <ul><b>Cidade:</b> Bacabal-Ma</ul>
+      <ul><b>Fone:</b> (99) 98162-4121</ul>
+    </ul>
+
+    <ul>
+      <li><b>2018 - 2021 - SK AUTOMOTIVE</b></li>
+      <ul><b>Cargo:</b> Ass. Op. Logístico</ul>
+      <ul><b>Cidade:</b> Goiania-GO</ul>
+      <ul><b>Fone:</b> (62) 3604-4566</ul>
+    </ul>
+
+    <ul>
+      <li><b>2021 - 2023 - SK AUTOMOTIVE</b></li>
+      <ul><b>Cargo:</b> Coordenador de Estoque</ul>
+      <ul><b>Cidade:</b> Contagem-MG</ul>
+      <ul><b>Fone:</b> (31) 2108-8273</ul>
+    </ul> 
+  </div>
+
+  <div class="button-info">
+    <button class=" cta cta1" onmouseover="showInfo('info-noroeste')" onmouseout="hideInfo('info-noroeste')">
+      <span class="icon1">
+        <i class="fas fa-arrow-right fa-1x arrow-position"></i>
+      </span>
+      <div class="hidden-info" id="info-noroeste">
+        <p><b>Principais Atividades:</b> Atuando na empresa no setor de confecções e calçados, minhas responsabilidades englobam uma variedade de tarefas essenciais que nela inclui a gestão do estoque, garantindo que os produtos estejam prontos e disponíveis para apresentação e exibição cuidadosa nas vitrines, proporcionando uma experiência visualmente atraente para os clientes.
+
+          Apoio os vendedores em suas buscas por produtos, além de oferecer um atendimento cordial e prestativo aos clientes, contribuindo para a satisfação geral do cliente.
+          
+          Organizar visualmente a empresa durante eventos especiais como promoções e datas comemorativas, criando uma ambientação que complementa a ocasião de forma memorável.
+          </p>
+      </div>
+    </button>
+
+      <button class="cta cta2" onmouseover="showInfo('info-nil-arts')" onmouseout="hideInfo('info-nil-arts')">
+          <span class="icon1">
+              <i class="fas fa-arrow-right fa-1x arrow-position"></i>
+          </span>
+          <div class="hidden-info" id="info-nil-arts">
+            <p><b>Principais Atividades:</b> Auxílio nas atividades relacionadas à serigrafia incluindo a preparação dos materiais necessários para a impressão em tela e posteriormente as imagens a serem impressas, manuseio das tintas e a aplicação delas nas telas para a impressão e em diferentes superfícies, como tecidos, papel, plástico. Contando também com uso sistemas gráficos para criação de desenhos, logotipos, estampas, entre outros.
+
+              Auxiliar na manutenção e limpeza dos equipamentos e das áreas de trabalho, além de colaborar no controle de qualidade das impressões, garantindo que os produtos finais atendam aos padrões estabelecidos.
+              </p>
+          </div>
+      </button>
+
+  
+    <button class="cta cta3" onmouseover="showInfo('info-sk-automotive-gyn')" onmouseout="hideInfo('info-sk-automotive-gyn')">
+          <span class="icon1">
+              <i class="fas fa-arrow-right fa-1x arrow-position"></i>
+          </span>   
+          <div class="hidden-info" id="info-sk-automotive-gyn">
+            <p><b>Principais Atividades:</b> Auxílio ao coordenador de logística na gestão da equipe e supervisão dos processos, abrangendo desde o recebimento até a expedição de mercadorias que inclui emissão de notas fiscais de vendas e atendimento aos clientes durante a retirada de mercadorias na área de expedição. Monitoramento e envio de produtos via transportadoras.
+
+              Além disso, desempenha atividades essenciais, como a separação, organização e armazenamento de mercadorias no estoque, além de prestar suporte no setor de recebimento, incluindo a conferência dos produtos.
+              </p>
+          </div>
+      </button>
+
+    <button class="cta cta4" onmouseover="showInfo('info-sk-automotive-bhz')" onmouseout="hideInfo('info-sk-automotive-bhz')">
+        <span class="icon1">
+            <i class="fas fa-arrow-right fa-1x arrow-position"></i>
+        </span>
+        <div class="hidden-info" id="info-sk-automotive-bhz">
+          <p><b>Principais Atividades:</b> Liderança da logística na filial, supervisionando uma equipe de aproximadamente 12 colaboradores.
+
+            Responsável por toda a gestão dos processos logísticos, desde o recebimento de mercadorias até a organização do armazenamento e a expedição. Mantém contato direto com fabricantes e clientes para resolver questões relacionadas à garantia e devolução.
+            
+            Gerencia os custos logísticos da filial, incluindo aquisição de materiais de consumo.
+            
+            Suporte às vendas de três filiais do grupo, processando pedidos remotamente e coordenando as transferências de estoque de Contagem. Também atende aos pedidos de transferência de produtos entre as tres filiais do estado, gerenciando essa demanda.
+            
+            Suporte operacional ao Departamento Administrativo, como controle de registros de ponto e banco de horas para a equipe de logística, além de supervisionar o registro de canhotos de notas fiscais emitidas.
+            
+            </p>
+        </div>
+    </button>
+
+  </div>
+  
+  </div>
+</div>
+</nav>
+<script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('section');
+      const infoContainers = document.querySelectorAll('.info-base');
+
+      sections.forEach(section => section.classList.remove('active-section'));
+      document.getElementById(sectionId).classList.add('active-section');
+
+      infoContainers.forEach(container => container.classList.remove('active-info'));
+      document.getElementById('info-' + sectionId).classList.add('active-info');
+    }
+
+    function showInfo(infoId) {
+    const info = document.getElementById(infoId);
+    info.style.display = 'block';
+}
+
+function hideInfo(infoId) {
+    const info = document.getElementById(infoId);
+    info.style.display = 'none';
+}
+
+    // Código JavaScript para carregar o mapa usando a API do Google Maps
+
+    function initMap() {
+    // Coordenadas do seu endereço
+    var myLatLng = { lat: -16.640150, lng: -49.456153 };
+
+    // Estilos personalizados do mapa
+    var mapStyles = [
+      {
+        "elementType": "geometry",
+        "stylers": [{ "color": "#f5f5f5" }]
+      },
+      {
+        "elementType": "labels.icon",
+        "stylers": [{ "visibility": "off" }]
+      },
+      {
+        "elementType": "labels.text.fill",
+        "stylers": [{ "color": "#616161" }]
+      },
+      {
+        "elementType": "labels.text.stroke",
+        "stylers": [{ "color": "#f5f5f5" }]
+      },
+      {
+        "featureType": "administrative.land_parcel",
+        "elementType": "labels.text.fill",
+        "stylers": [{ "color": "#bdbdbd" }]
+      },
+      // ... adicione mais estilos aqui ...
+    ];
+
+    // Opções do mapa
+    var mapOptions = {
+      zoom: 15,
+      center: myLatLng,
+      styles: mapStyles, // Aplicar estilos personalizados
+      disableDefaultUI: true // Desativar controles padrão do mapa
+    };
+
+    // Criar o mapa
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+    // Adicionar um marcador para o endereço
+    var marker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      title: "Rua Doutor Sizemando Silva Campos"
+    });
+  }
+</script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfVOmi3pFnGz2UpxviqBGR3k71dYpOBpM&callback=initMap" async defer></script>
+
+
+</script>
+
+</body>
+</html>
